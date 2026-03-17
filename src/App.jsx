@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Products from './components/Products/Products'
+import Aos from 'aos'
+import "aos/dist/aos.css"
+import TopProducts from './components/TopProducts/TopProducts'
 
 const App = () => {
+
+  useEffect(() => {
+    Aos.init({
+      offset:100,
+      duration:800,
+      easing:"ease-in-out-sine",
+      delay:100,
+    })
+    Aos.refresh()
+  })
+
   return (
     <div className='bg'>
       <Navbar/>
       <Hero/>
       <Products/>
+      <TopProducts/>
 
-      <h2 className='text-center py-3'>Development in Progress...</h2>
+      <h1 className='text-center py-3 mt-20 font-bold text-3xl'>Development in Progress...</h1>
     </div>
   )
 }
