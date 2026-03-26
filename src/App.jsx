@@ -8,6 +8,7 @@ import TopProducts from './components/TopProducts/TopProducts'
 import Banner from './components/Banner/Banner'
 import Subscribe from './components/Subscribe/Subscribe'
 import Testimonials from './components/Testimonials/Testimonials'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
 
@@ -22,7 +23,7 @@ const App = () => {
   })
 
   return (
-    <div className='bg'>
+    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200'>
       <Navbar/>
       <Hero/>
       <Products/>
@@ -30,8 +31,7 @@ const App = () => {
       <Banner/>
       <Subscribe/>
       <Testimonials/>
-
-      <h1 className='text-center py-3 mt-20 font-bold text-3xl'>Development in Progress...</h1>
+      <Footer/>
     </div>
   )
 }
